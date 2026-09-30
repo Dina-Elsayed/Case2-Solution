@@ -31,6 +31,8 @@ namespace Case2_Solution
 
             builder.Services.AddScoped<IPatientRepo, PatientRepo>();
 
+            builder.Services.AddScoped<IAppointment,  AppointmentRepo>();
+
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 

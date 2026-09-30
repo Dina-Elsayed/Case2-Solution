@@ -9,16 +9,19 @@ namespace Case2_Solution.Repos.Implementation
         private readonly AppDbContext _context;
         public IDepartmentRepo DepartmentRepo { get; }
 
-        public IDoctorRepo DoctorRepo { get; set; }
+        public IDoctorRepo DoctorRepo { get;}
 
-        public IPatientRepo PatientRepo { get; set; }
+        public IPatientRepo PatientRepo { get; }
 
-        public UnitOfWork(AppDbContext context, IDepartmentRepo departmentRepo, IDoctorRepo doctorRepo, IPatientRepo patientRepo)
+        public IAppointment AppointmentRepo {  get; }
+
+        public UnitOfWork(AppDbContext context, IDepartmentRepo departmentRepo, IDoctorRepo doctorRepo, IPatientRepo patientRepo, IAppointment appointmentRepo)
         {
             _context = context;
             DepartmentRepo = departmentRepo;
             DoctorRepo = doctorRepo;
-            PatientRepo = patientRepo; 
+            PatientRepo = patientRepo;
+            AppointmentRepo = appointmentRepo ;
 
 
         }

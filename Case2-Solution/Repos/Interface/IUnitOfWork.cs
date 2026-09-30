@@ -8,6 +8,8 @@
 
         IPatientRepo PatientRepo { get; }
 
+        IAppointment AppointmentRepo { get; }
+
         int Save();
     }
 }
